@@ -35,7 +35,7 @@ Descrição breve dos projetos incluídos neste repositório:
 1. **Solução Desafios SENSORES - Desafios Motores e Sensores** - Desenvolva um código que permita a um robô, equipado com a capacidade de utilizar até quatro sensores simultaneamente conforme a configuração dos sensores EV3, seguir um conjunto específico de regras de movimentação e interação com o ambiente. O algoritmo deve ser projetado para que o robô mantenha um movimento paralelo em relação à parede, mantendo-se a uma distância fixa dela. Durante sua locomoção, o robô deve ser capaz de reconhecer cores específicas no chão e reagir a elas da seguinte maneira: ao detectar a cor vermelha, o robô deve realizar uma curva de 90 graus e prosseguir com seu trajeto ao longo da parede. Se identificar a cor amarela, deve pausar e aguardar por um comando de um usuário antes de retomar sua rotina normal de movimentação. Por fim, ao encontrar a cor verde, o robô deve cessar todos os movimentos e parar completamente.
 
 
-2. **Solução Desafios MOVIMENTAÇÃO - Desafios Motores e Sensores** - Analíse o código fornecido pela equipe Robo Forge e crie um código mais idiomático e bem estruturado repeitando as especificidades da linguágem Python
+2. **Solução Desafios MOVIMENTAÇÃO - Desafios Motores e Sensores** - Analíse o código fornecido pela equipe Robo Forge e crie um código mais idiomático e bem estruturado respeitando as especificidades da linguágem Python
 
 
 ## Como Usar
