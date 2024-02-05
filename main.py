@@ -8,18 +8,18 @@ from pybricks.robotics import DriveBase
 from pybricks.tools import wait
 
 # Define a inicialização da biblioteca como módulo de documentação.
-ev3 = EV3Brick()
+ev3: object = EV3Brick()
 
 # Definição das variáveis de motor.
 LEFT_MOTOR: object = Motor(Port.A)
-RIGTH_MOTOR: object = Motor(Port.B)
+RIGHT_MOTOR: object = Motor(Port.B)
 
 # Definição do diametro das rodas e da pista de eixo.
 WHEEL_DIAMETER: int = 56
 AXLE_TRACK: int = 114
 
 # Intanciação da classe que direciona o robo.
-ROBOT: object = DriveBase(LEFT_MOTOR, RIGTH_MOTOR, WHEEL_DIAMETER, AXLE_TRACK)
+ROBOT: object = DriveBase(LEFT_MOTOR, RIGHT_MOTOR, WHEEL_DIAMETER, AXLE_TRACK)
 
 # Definição das classes que compõem o robo.
 COLOR_SENSOR: object = ColorSensor(Port.S1)
@@ -34,7 +34,7 @@ OBSTACLE_DISTANCE: int = 200
 # Loop principal
 while True:
     # Lê a intensidade de luz refletida (0 a 100)
-    REFLECTION: object = COLOR_SENSOR.reflection()
+    REFLECTION: int = COLOR_SENSOR.reflection()
     # Calcula o desvio da leitura para o valor de referência
     # Ajusta os valores abaixo conforme a necessidade para melhor seguimento da linha
     DEVIATION: float = REFLECTION - 50
@@ -46,12 +46,12 @@ while True:
         # Para o robô se detectar um obstáculo e a cor amarela
         if COLOR == Color.YELLOW:
             ROBOT.stop()
-            wait(5000)  # Espera 5 segundos
+            wait(10000)  # Espera 5 segundos
         # Para o robô se detectar um obstáculo e a cor verde
         elif COLOR == Color.GREEN:
             ROBOT.stop()
         else:
-            wait(2)  # Pequena pausa antes de continuar
+            wait(1000)  # Pequena pausa antes de continuar
     else:
         # Se não há obstáculos, continua seguindo a linha
         ROBOT.drive(SPEED, TURN_RATE)
